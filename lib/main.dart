@@ -15,8 +15,12 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+          appBarTheme: const AppBarTheme(
+        backgroundColor: Colors.white,
+        foregroundColor: Colors.black,
+      )),
       title: 'Startup Name Generator',
-      // home: RandomWords(),
       routes: {
         '/': (context) => const RandomWords(),
       },
